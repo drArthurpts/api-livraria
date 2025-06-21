@@ -1,4 +1,4 @@
-# Alura Livraria
+# Livraria
 
 Projeto de API REST para gerenciamento de livros, desenvolvido em Node.js com Express e MongoDB.
 
