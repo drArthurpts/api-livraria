@@ -4,10 +4,12 @@ const app = express();
 app.use(express.json()); 
 
 const livros = [
-    { id: 1, 
+    { 
+      id: 1, 
       titulo: 'O Senhor dos Anéis', 
     },
-    { id: 2, 
+    { 
+      id: 2, 
       titulo: 'O Hobbit', 
     }
 ];
@@ -36,7 +38,15 @@ app.post('/livros', (req, res) => {
 });
 
 app.put('/livros/:id', (req, res) => {
-    
+    const index = buscaLivro(req.params.id);
+    livros[index].titulo = req.body.titulo;
+    res.status(200).json(livros);
+});
+
+app.delete('/livros/:id', (req, res) => {
+    const index = buscaLivro(req.params.id);
+    livros.splice(index, 1);
+    res.status(200).send(`Livro removido com sucesso!`);
 });
 
 export default app;
