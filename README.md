@@ -86,4 +86,4 @@ src/
 
 ---
 
-Desenvolvido para fins
+Desenvolvido para fins de estudo.
