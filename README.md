@@ -9,6 +9,13 @@ Projeto de API REST para gerenciamento de livros, desenvolvido em Node.js com Ex
 - Adicionar novo livro
 - Atualizar livro existente
 - Remover livro
+- Listar autores
+- Buscar autor por ID
+- Adicionar novo autor
+- Atualizar autor existente
+- Remover autor
+- Filtrar livros por editora
+- Relacionar livros com autores
 
 ## Tecnologias Utilizadas
 
@@ -49,17 +56,34 @@ src/
     dbConnect.js
   models/
     livro.js
+    autor.js
+  controllers/
+    livroController.js
+    autorController.js
+  routes/
+    livrosRoutes.js
+    autoresRoutes.js
 ```
 
 ## Endpoints
 
-- `GET /` — Mensagem de boas-vindas
+### Livros
+
 - `GET /livros` — Lista todos os livros
 - `GET /livros/:id` — Busca um livro pelo ID
 - `POST /livros` — Adiciona um novo livro
 - `PUT /livros/:id` — Atualiza um livro existente
 - `DELETE /livros/:id` — Remove um livro
+- `GET /livros/busca?editora=nome` — Filtra livros por editora
+
+### Autores
+
+- `GET /autores` — Lista todos os autores
+- `GET /autores/:id` — Busca um autor pelo ID
+- `POST /autores` — Adiciona um novo autor
+- `PUT /autores/:id` — Atualiza um autor existente
+- `DELETE /autores/:id` — Remove um autor
 
 ---
 
-Desenvolvido para fins de estudo .
+Desenvolvido para fins
