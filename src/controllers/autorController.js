@@ -1,5 +1,6 @@
 import { json } from 'express';
-import {autor} from '../models/Autor';
+import { autor } from '../models/Autor.js';
+
 
 class AutorController {
     static async cadastrarAutor(req, res) {
@@ -25,7 +26,7 @@ class AutorController {
     static async listarAutorPorId(req, res) {
         const { id } = req.params;
         try {
-            const autorEncontrado = await livro.findById(id);
+            const autorEncontrado = await autor.findById(id);
             if (!autorEncontrado) {
                 return res.status(404).json({ message: 'autor não encontrado' });
             }
