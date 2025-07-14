@@ -85,5 +85,3 @@ src/
 - `DELETE /autores/:id` — Remove um autor
 
 ---
-
-Desenvolvido para fins de estudo.
